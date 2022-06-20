@@ -1,0 +1,23 @@
+<div style="background-color: grey; width: 900px; height: 500px; margin: 0px auto; border: 1px solid black;">
+    <a class="nav-link active" aria-current="page" href="/">Home</a> <br> 
+<% if(Producto.length) { %> 
+    
+    <ul>
+    <% Producto.map(Producto => { %> 
+
+        <li>
+            <h3 style="color: blue;"> Vista del producto </h3>
+         Producto:  <%= Producto.producto %> <br>
+         Precio:   <%= Producto.precio %> <br>
+         thumbnail: <%= Producto.thumbnail %> <br>
+            
+        </li>
+ 
+    <% }) %> 
+    </ul>
+
+<% } else { %> 
+    <p style="color: white;">No hay ningun Producto :(</p>
+<% } %> 
+
+</div>
